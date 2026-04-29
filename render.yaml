@@ -15,5 +15,4 @@ services:
 databases:
   - name: mess-waste-db
     databaseName: mess_waste
-    user: postgres
     plan: free
