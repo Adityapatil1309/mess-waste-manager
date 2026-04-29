@@ -1,0 +1,26 @@
+# Dependencies
+*.pyc
+.env
+__pycache__/
+node_modules/
+venv/
+
+# Build
+build/
+dist/
+
+# ML Artifacts
+backend/ml_artifacts/
+
+# Logs
+*.log
+
+# IDE
+*.swo
+*.swp
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
