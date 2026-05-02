@@ -12,6 +12,21 @@ services:
           property: connectionString
       - key: JWT_SECRET_KEY
         generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  - type: web
+    name: mess-waste-frontend
+    plan: free
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: mess-waste-backend
+          envVarKey: RENDER_EXTERNAL_URL
 
 databases:
   - name: mess-waste-db
